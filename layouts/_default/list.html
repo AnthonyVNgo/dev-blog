@@ -1,0 +1,14 @@
+{{ define "main" }} 
+<div class="space-y-5 w-1/2 mx-auto">
+  
+  {{ partial "tags" .}}
+
+  {{ range .Paginator.Pages }}
+    {{ partial "posts" .}}
+  {{ end }}
+
+  {{ partial "pagination" .}}
+
+
+
+{{ end }}

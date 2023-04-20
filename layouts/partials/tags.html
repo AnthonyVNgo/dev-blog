@@ -1,0 +1,13 @@
+<h2 class="text-center font-bold">
+  Tags
+</h2>
+<div class="flex justify-center space-x-5 capitalize">  
+  {{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt:= .Count }} 
+    {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+    <div>
+      <a href="{{ .RelPermalink }}" title="All pages with tag <i>{{$name}}</i>" class="hover:underline">{{$name}}</a>
+      <sup>{{$cnt}}</sup>
+    </div>
+    {{end}} 
+  {{end}}
+</div>

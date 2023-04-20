@@ -1,0 +1,22 @@
+<div class="space-y-5 p-5 border">
+
+  <div class="space-x-4">
+    {{ range $tags := .Params.tags }}
+    <a href="/tags/{{ $tags | urlize }}" class="text-orange-500 capitalize font-semibold text-sm">
+      <span>{{ $tags }}</span>
+    </a>
+    {{ end }}
+  </div>
+
+  <h2 class="font-bold text-2xl">
+    <a href="{{ .Permalink }}">
+      {{ .Title }}
+    </a>
+  </h2>
+  
+  <div class="uppercase text-xs flex space-x-4">          
+    <p>{{ .Date.Format "January 2, 2006" }}</p>
+    <p>{{.ReadingTime}} min read</p>
+  </div>
+
+</div>
