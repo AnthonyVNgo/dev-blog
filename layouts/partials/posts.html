@@ -1,11 +1,18 @@
 <div class="space-y-5 p-5 border">
 
   <div class="space-x-4">
-    {{ range $tags := .Params.tags }}
+    <!-- {{ range $tags := .Params.tags }}
     <a href="/tags/{{ $tags | urlize }}" class="text-orange-500 capitalize font-semibold text-sm">
       <span>{{ $tags }}</span>
     </a>
+    {{ end }} -->
+
+    {{ range $tags := .Params.tags }}
+      <a href="{{ $.Site.BaseURL }}tags/{{ $tags | urlize }}" class="text-orange-500 capitalize font-semibold text-sm">
+        <span>{{ $tags }}</span>
+      </a>
     {{ end }}
+
   </div>
 
   <h2 class="font-bold text-2xl">
