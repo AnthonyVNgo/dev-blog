@@ -1,6 +1,6 @@
 ---
 title: Testing tags
-date: 2023-04-19
+date: 2023-04-19T00:37:00-07:00
 tags: ['hugo']
 ---
 
