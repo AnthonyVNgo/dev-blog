@@ -1,7 +1,7 @@
 ---
 title: How I set up my Vite React Tailwind Storybook projects
 date: 2023-04-20T19:00:00-07:00
-tags: ['Vite', 'React', 'Tailwind']
+tags: ['Vite', 'React', 'Tailwind', 'Storybook']
 ---
 
 I've been working on a lot of projects lately that use Tailwind for styling. On top of Tailwind, I've started to implement and familiarize myself with Storybook, which should help jumpstart the front-end dev process. Here's how I get my projects / learning / Tailwind Storybook exercises set up: 
@@ -19,11 +19,12 @@ npx tailwindcss init -p
 
 2. Update the content key within tailwind.config.js
 ```
-// your JavaScript code here
-
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{html,js}"],
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {},
   },
@@ -73,6 +74,10 @@ npm run dev
 npm run storybook
 ```
 After following those step, you should have a Vite + React + Tailwind + Storybook project set up.
+
+Or
+
+Just clone this [vite-react-tailwind-storybook repo](https://github.com/AnthonyVNgo/vite-react-tailwind-storybook)
 
 <hr>
 
